@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(3, 3, 3);
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: rgb(160, 160, 160);
+}
+
+h2{
+    text-align: center;
+    color: rgb(160, 160, 160);
+}
+
+p {
+    color: rgb(160, 160, 160);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.itemimg{
+    height: 25%;
+    width: 25%;
+}
+
+.selected {
+    background-color: rgb(94, 94, 94);
+    color: black;
+}
+
+.container {
+    background-color: rgb(29, 29, 29);
+    border-radius: 15px;
+    margin: 5%;
+    margin-bottom: 10%;
+}
+
+.Category{
+    text-align: center;
+    padding: 15px;
+    animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1};
+}
+
+.row{
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.menubutton{
+    background-color: rgb(15, 15, 15);
+    width: 33%;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    
+}
+
+.columnitem{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rowitem{
+    background-color: rgb(15, 15, 15);
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}

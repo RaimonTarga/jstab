@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>Black market</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<body>
+    <h1>Welcome to the black market</h1>
+    <img src="./img/skull.gif">
+    <p>
+        We have a wide variety of illegal contraband products to sell at fair prices. No delivery, pick up only. Availability might vary depending on the difficulty of acquiring the goods.
+    </p>
+    <div class="container">
+        <h2>Items</h2>
+
+        <div class="row" >
+            <a class="menubutton"  href="javascript:void(0)" onclick="openCategory(event, 'Guns');">
+            <div class="tablink">Guns</div>
+            </a>
+            <a class="menubutton" href="javascript:void(0)" onclick="openCategory(event, 'Drugs');">
+            <div class="tablink">Drugs</div>
+            </a>
+            <a class="menubutton" href="javascript:void(0)" onclick="openCategory(event, 'Lockpicks');">
+            <div class="tablink">Lockpicks</div>
+            </a>
+        </div>
+
+        <div id="Guns" class="container Category" style="display:none">
+            <h2>Guns</h2>
+            <p>Fully loaded, ready to take care of any "problems".</p>
+            <div class="columnitem">
+                <div class="rowitem">
+                    <h2>M9</h2>
+                    <img class="itemimg" src="./img/m9.png" />
+                    <p>Beretta M9 semiautomatic pistol, 9mm rounds</p>
+                </div>
+                <div class="rowitem">
+                    <h2>AK47</h2>
+                    <img class="itemimg" src="./img/ak47.png" />
+                    <p>Kalashnikov 47 fully automatic assault rifle, 7.62mm rounds</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Drugs" class="container Category" style="display:none">
+            <h2>Drugs</h2>
+            <p>High quality goods for personal recreation.</p> 
+            <div class="columnitem">
+                <div class="rowitem">
+                    <h2>Pills</h2>
+                    <img class="itemimg" src="./img/pills.png" />
+                    <p>Meth pills made in our local lab</p>
+                </div>
+                <div class="rowitem">
+                    <h2>Weed</h2>
+                    <img class="itemimg" src="./img/plant.png" />
+                    <p>Homegrown weed with the highest quality</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Lockpicks" class="container Category" style="display:none">
+            <h2>Lockpicks</h2>
+            <p>Tools of the trade for anyone willing to break in places they're not supposed to be in.</p>
+            <div class="columnitem">
+                <div class="rowitem">
+                    <h2>Lockpick kit</h2>
+                    <img class="itemimg" src="./img/lock.png" />
+                    <p>A kit with tools used to break in most locks</p>
+                </div>
+                <div class="rowitem">
+                    <h2>Skeleton key</h2>
+                    <img class="itemimg" src="./img/key.png" />
+                    <p>A key that can open any lock</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function openCategory(evt, CategoryName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("Category");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" selected", "");
+    } 
+    document.getElementById(CategoryName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " selected";
+    }
+</script>
+
+</body>
+</html>
